@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="22px" viewBox="0 0 31 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Payphone-desktop_v3" transform="translate(-1002.000000, -2392.000000)" stroke="#6e5f3b" stroke-width="2">
+            <g id="use-case" transform="translate(-76.000000, 1880.000000)">
+                <g id="arrow" transform="translate(1049.000000, 513.000000)">
+                    <path d="M30.3359375,9.625 L58.0911165,9.625" id="Path-9"></path>
+                    <polyline id="Path-19" stroke-linejoin="round" points="45.1152344 0.87109375 58.3134766 9.79394531 45.1152344 19.1005859"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
