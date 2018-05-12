@@ -162,18 +162,53 @@
   .use_case-carousel .owl-dots {
     margin-top: 23px;
   }
+  .use_case-title {
+    margin-bottom: 10px;
+  }
   .user_group {
     margin-top: -368px;
     padding-top: 290px;
     background-size: 100%;
-    padding-bottom: 0;
-    .container {
+    padding-bottom:60px;
+    background-size: cover;
+   
+  }
+  .user_group-list {
+    background: 0 0;
+    min-height: inherit;
+    padding-top: 0;
+    li {
+      &:before {
+        display: none;
+      }
+      float: none !important;
+      text-align: left;
+      max-width: 100%;
+      margin-bottom: 7px;
+      padding-left: 30px;
+      margin-top: 0  !important;
+      &:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #a8236c;
+        border-radius: 50%;
+        box-shadow: 0px 0px 35px 0px rgba(168,35,108,1);
+        position: absolute;
+        top: 0;
+        left: 0;
 
-      display: none;
+      }
     }
+  }
+  .user_group-title {
+    margin-bottom: 20px;
   }
   .team {
     padding: 0 0 30px;
+    .col-6 {
+      padding: 0 10px;
+    }
   }
   .founders-item {
     .img {
@@ -201,5 +236,12 @@
     background-position: left;
     padding-top: 115px;
     padding-bottom: 60px;
+  }
+  .user_group-img {
+    display: block;
+    margin-top: 20px;
+    img {
+      width: 100%;
+    }
   }
 }

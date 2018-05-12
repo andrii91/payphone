@@ -64,17 +64,29 @@ $(document).ready(function () {
   });
 
   $('input[name="thankyou_url"]').val(window.location.href + 'success.html')
+  if ($('.ok').length == 3) {
+    $('.submit').removeAttr('disabled');
+  } else {
+    $('.submit').attr('disabled', 'disabled');
 
-  $('input').change(function () {
+  }
+  $('#name').change(function () {
+
+    console.log($('.ok').length);
     if ($(this).val() == '' || $(this).val() == ' ') {
       console.log('error');
       $(this).parent().find('.ok').remove();
       $(this).parent().addClass('error');
+      $('.submit').attr('disabled', 'disabled');
 
     } else {
       console.log('ok');
       $(this).parent().removeClass('error');
-      $(this).parent().append('<span class="ok"><svg viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#00c48d" stroke-width="6" stroke-miterlimit="10" d="M38.5 67.3L60.6 90l39.9-41"/></svg></span>')
+      $(this).parent().append('<span class="ok"><svg viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#00c48d" stroke-width="6" stroke-miterlimit="10" d="M38.5 67.3L60.6 90l39.9-41"/></svg></span>');
+      if ($('.ok').length == 3) {
+        $('.submit').removeAttr('disabled');
+      }
+
     }
 
   });
@@ -82,28 +94,38 @@ $(document).ready(function () {
   $('#phone').change(function () {
     var $phone = parseInt($(this).val());
     var index = $(this).val().indexOf('+');
-    if ($phone == '' || $phone == ' ' || $phone == NaN || index !== 0 ) {
+    if ($phone == '' || $phone == ' ' || $phone == NaN || index !== 0) {
       $(this).parent().find('.ok').remove();
       $(this).parent().addClass('error');
+      $('.submit').attr('disabled', 'disabled');
+
     } else {
       console.log('ok');
       $(this).parent().removeClass('error');
+      $(this).parent().append('<span class="ok"><svg viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#00c48d" stroke-width="6" stroke-miterlimit="10" d="M38.5 67.3L60.6 90l39.9-41"/></svg></span>');
 
-      $(this).parent().append('<span class="ok"><svg viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#00c48d" stroke-width="6" stroke-miterlimit="10" d="M38.5 67.3L60.6 90l39.9-41"/></svg></span>')
+      if ($('.ok').length == 3) {
+        $('.submit').removeAttr('disabled');
+      }
+
     }
   })
 
   $('#email').change(function () {
     var $email = $(this).val().indexOf('@');
     var index = $(this).val().indexOf('.')
-    if ($email == '' || $email == ' ' || $email == NaN || $email < 0|| index < 0) {
+    if ($email == '' || $email == ' ' || $email == NaN || $email < 0 || index < 0) {
       $(this).parent().find('.ok').remove();
       $(this).parent().addClass('error');
+      $('.submit').attr('disabled', 'disabled');
 
     } else {
       console.log('ok');
       $(this).parent().removeClass('error');
-      $(this).parent().append('<span class="ok"><svg viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#00c48d" stroke-width="6" stroke-miterlimit="10" d="M38.5 67.3L60.6 90l39.9-41"/></svg></span>')
+      $(this).parent().append('<span class="ok"><svg viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#00c48d" stroke-width="6" stroke-miterlimit="10" d="M38.5 67.3L60.6 90l39.9-41"/></svg></span>');
+      if ($('.ok').length == 3) {
+        $('.submit').removeAttr('disabled');
+      }
     }
   })
 });

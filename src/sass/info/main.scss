@@ -648,6 +648,10 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
   .owl-item {
     padding-top: 48px;
     .item {
+       padding: 37px 55px 60px;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0 13px 37px rgba(0, 12, 255, 0.1);
       h4 {
         color: #ffffff;
         font-family: Muli;
@@ -678,7 +682,6 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
       -webkit-filter: blur(1px);
       -moz-filter: blur(1px);
       filter: blur(1px);
-transition: 0s;
       p {
         max-height: 116px;
         overflow: hidden;
@@ -1209,5 +1212,18 @@ background-color: #630a3b;
         margin-right: auto;
       }
     }
+  }
+}
+
+.user_group-img {
+  display: none;
+}
+
+
+
+.submit[disabled] {
+  cursor: none;
+  &:before {
+    background: #af1870 !important;
   }
 }
