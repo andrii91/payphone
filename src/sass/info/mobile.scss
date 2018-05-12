@@ -68,6 +68,7 @@
   .problem-item {
     min-height: 356px;
     margin: 0 auto;
+    margin-left: -18px;
     img {
       float: left;
       margin-left: 52px;
@@ -119,7 +120,7 @@
   .solution-img {
         max-width: 310px;
     position: relative;
-    margin:  0 auto;
+    margin:  120px auto 0;
   }
   .solution-img img {
     max-width: 272px;
@@ -147,7 +148,12 @@
     padding-top: 80px;
   }
   .use_case-nav {
-    display: none;
+    margin-bottom: 10px;
+    li {
+          margin: 0 1.5px;
+    cursor: pointer;
+    padding: 5px 0;
+    }
   }
   .use_case-carousel .owl-item.center .item {
     min-height: inherit;
@@ -195,7 +201,7 @@
         border-radius: 50%;
         box-shadow: 0px 0px 35px 0px rgba(168,35,108,1);
         position: absolute;
-        top: 0;
+        top: 8px;
         left: 0;
 
       }
