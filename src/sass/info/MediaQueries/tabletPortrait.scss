@@ -1,8 +1,157 @@
 @import '../../mq';
 
 @media #{$tabletPortrait} {
-    @import '../mobile';
-  	& {
-     
-	}
+  //    @import '../mobile';
+  & {
+    header,
+    .main,
+    footer {
+      overflow: hidden;
+    }
+    .menu li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+    .md-center {
+      margin: 0 auto;
+    }
+    .status:before {
+      width: 75vw;
+    }
+    .head-form {
+      margin: 70px auto;
+    }
+    .solution-img {
+      position: relative;
+      img {
+        margin-left: 0;
+      }
+      .solution-check {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    .solution {
+      padding-top: 180px;
+      padding-bottom: 95px;
+    }
+    .use_case-nav li {
+      margin: 0 9.5px;
+    }
+    .use_case-carousel .owl-item.active {
+      margin-left: -20.3vw;
+    }
+    .use_case-carousel .owl-item.center {
+      width: 72vw!important;
+      margin-left: 0;
+    }
+    .use_case-carousel {
+      * {
+        transition: 0;
+
+      }
+    }
+    .user_group-list {
+      background: url(../images/users_group@2x.png) no-repeat center;
+      background-size: 345px;
+      max-width: 711px;
+      min-height: 383px;
+      padding-top: 30px;
+    }
+    .col-md-3 {
+      padding: 0 10px;
+    }
+    .user_group {
+      padding-top: 295px;
+      padding-bottom: 40px;
+    }
+    .team {
+      padding-bottom: 0;
+    }
+    .user_group-list {
+      padding-top: 12px;
+      li {
+
+        &:first-child {
+          &:before {
+            background: url('../images/user_group1p.png') no-repeat center;
+            width: 282px;
+            height: 351px;
+            top: 14px;
+            left: 106%;
+          }
+        }
+
+        &:nth-child(2) {
+          &:before {
+            background: url('../images/user_group2p.png') no-repeat center;
+            width: 57px;
+            height: 78px;
+            top: 12px;
+            right: 105%;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            background: url('../images/user_group3p.png') no-repeat center;
+            width: 133px;
+            height: 137px;
+            top: 16px;
+            left: 122%;
+            ;
+          }
+        }
+
+        &:nth-child(4) {
+          &:before {
+            background: url('../images/user_group4p.png') no-repeat center;
+            width: 240px;
+            height: 89px;
+            bottom: 12px;
+            right: 105%;
+            ;
+          }
+        }
+
+        &:nth-child(5) {
+          &:before {
+            background: url('../images/user_group5p.png') no-repeat center;
+            width: 260px;
+            height: 180px;
+            bottom: 8px;
+            left: 110%;
+            ;
+          }
+        }
+
+        &:nth-child(6) {
+          &:before {
+            content: "";
+            background: url('../images/user_group6p.png') no-repeat center;
+            width: 255px;
+            height: 115px;
+            top: 35px;
+            right: 70.5%;
+          }
+        }
+
+        &:nth-child(7) {
+          &:before {
+            background: url('../images/user_group7p.png') no-repeat center;
+            width: 253px;
+            height: 84px;
+            top: 10px;
+            left: 45%;
+
+          }
+        }
+      }
+    }
+    .use_case-carousel .owl-nav {
+      max-width: 808px;
+    }
+  }
 }

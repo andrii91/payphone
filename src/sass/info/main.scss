@@ -88,6 +88,7 @@ nav {
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  border: 1px solid #d5c49b;
   &.white {
     background-color: transparent;
     border: 1px solid #ffffff;
@@ -114,6 +115,8 @@ nav {
   }
   &:hover {
     color: #fff;
+    border: 1px solid #ffffff;
+    
   }
   &:hover:before,
   &:focus:before,
@@ -237,6 +240,20 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
       display: block;
       width: 100%; 
       margin-bottom: 24px;
+      position: relative;
+      &.error {
+        border: 1px solid red;
+      }
+      .ok {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+        svg {
+          width: 30px;
+        }
+      }
       input {
         color: #1d2342;
         font-family: Muli;
@@ -268,6 +285,10 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
       cursor: pointer;
       min-height: 45px;
       background-color: #af1870;
+      &:before {
+      background-color: #d5c49b;
+        
+      }
     }
   }
   form input:focus {
@@ -376,6 +397,23 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
   li {
     display: inline-block;
     vertical-align: middle;
+    transition: 0.3s;
+    path {
+      transition: 0.3s;
+      
+    }
+    &:hover {
+      transform: scale(1.09);
+      a {
+        svg {
+          path {
+            &:nth-child(1) {
+            fill: #af1870;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -595,7 +633,7 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
     &:last-child {
       margin-right: 0;
     }
-    &.active {
+    &.active, &:hover {
       color: #6e5f3b;
       opacity: 1;
     }
@@ -604,6 +642,9 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
 
 .use_case-carousel {
   position: relative;
+  * {
+    transition: 0.1s;
+  }
   .owl-item {
     padding-top: 48px;
     .item {
@@ -637,7 +678,7 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
       -webkit-filter: blur(1px);
       -moz-filter: blur(1px);
       filter: blur(1px);
-
+transition: 0s;
       p {
         max-height: 116px;
         overflow: hidden;
@@ -656,7 +697,7 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
     -webkit-filter: blur(0);
     -moz-filter: blur(0);
     filter: blur(0);
-
+transition: 0.1s;
     p {
       max-height: 100%;
       overflow: visible;
@@ -700,6 +741,10 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
       transform: rotate(180deg);
       outline: none;
       float: left;
+      transition: 0.2s;
+      &:hover {
+        background: url('../images/arrowH.svg') no-repeat !important;
+      }
       span {
         display: none;
       }
@@ -710,7 +755,11 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
       height: 22px;
       background-size: 100%;
       outline: none;
+      transition: 0.2s;
       float: right;
+      &:hover {
+        background: url('../images/arrowH.svg') no-repeat !important;
+      }
       span {
         display: none;
       }
@@ -931,10 +980,48 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
   text-align: center;
   margin-bottom: 30px;
   cursor: pointer;
+  .img {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    &:before {
+        content: "";
+        background: #000;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+      transition: 0.2s;
+      }
+   
+  }
+  &:hover {
+    .img {
+      &:before {
+        opacity: 0.6;
+      }
+       &:after {
+      content: "";
+      background: url('../images/medical.svg') no-repeat center;
+      width: 30px;
+      background-size: 100%;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 6;
+    }
+    }
+  }
   img {
     max-width: 260px;
     width: 100%;
-    margin-bottom: 20px;
     border-radius: 50%;
     filter: grayscale(100%);
   }
@@ -956,6 +1043,12 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
     letter-spacing: 0.04px;
     max-width: 210px;
     margin:  0 auto;
+    
+    b {
+      font-weight: 700;
+      margin-top: 20px;
+      display: block;
+    }
   }
 }
 
@@ -967,6 +1060,18 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
   line-height: 27px;
   letter-spacing: 0.04px;
   margin-bottom: 5px;
+  svg {
+    path {
+      transition: 0.2s;
+      
+    }
+    &:hover {
+      path {
+      fill: #af1870;
+        
+      }
+    }
+  }
 }
 
 .team-item {
@@ -1025,6 +1130,13 @@ background-image: linear-gradient(270deg, rgba(76, 0, 41, 0) 0%, #2f001a 100%);
   line-height: 28px;
   letter-spacing: 0.07px;
   cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: #d5c49b;
+    &:before {
+        color: #d5c49b;
+    }
+  }
   &:before {
     content: "+";
     color: #ffffff;
@@ -1066,6 +1178,8 @@ background-color: #630a3b;
     font-weight: 300;
     line-height: 25px;
     letter-spacing: 0.03px;
+    display: block;
+    text-align: right;
     svg {
       width: 22px;
     }
@@ -1073,5 +1187,27 @@ background-color: #630a3b;
   .social {
     text-align: right;
     margin-top: 0;
+  }
+}
+
+.success {
+  .head {
+    padding-top: 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      min-height: calc(100vh - 120px);
+      text-align: center;
+    background: url('../images/bgthx.png') no-repeat center top;
+    background-size: cover;
+    .head-item {
+      p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 }
