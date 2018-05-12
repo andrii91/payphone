@@ -1219,11 +1219,11 @@ background-color: #630a3b;
   display: none;
 }
 
-
-
 .submit[disabled] {
   cursor: not-allowed;
   &:before {
     background: #af1870 !important;
   }
 }
+
+.hidden{ display: none }
