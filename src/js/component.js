@@ -64,12 +64,12 @@ $(document).ready(function () {
   });
 
   $('input[name="thankyou_url"]').val(window.location.href + 'success.html')
-  if ($('.ok').length == 3) {
+/*  if ($('.ok').length == 3) {
     $('.submit').removeAttr('disabled');
   } else {
-    $('.submit').attr('disabled', 'disabled');
+//    $('.submit').attr('disabled', 'disabled');
 
-  }
+  }*/
   $('#name').change(function () {
 
     console.log($('.ok').length);
@@ -77,7 +77,7 @@ $(document).ready(function () {
       console.log('error');
       $(this).parent().find('.ok').remove();
       $(this).parent().addClass('error');
-      $('.submit').attr('disabled', 'disabled');
+//      $('.submit').attr('disabled', 'disabled');
 
     } else {
       console.log('ok');
@@ -97,7 +97,7 @@ $(document).ready(function () {
     if ($phone == '' || $phone == ' ' || $phone == NaN || index !== 0) {
       $(this).parent().find('.ok').remove();
       $(this).parent().addClass('error');
-      $('.submit').attr('disabled', 'disabled');
+//      $('.submit').attr('disabled', 'disabled');
 
     } else {
       console.log('ok');
@@ -117,7 +117,7 @@ $(document).ready(function () {
     if ($email == '' || $email == ' ' || $email == NaN || $email < 0 || index < 0) {
       $(this).parent().find('.ok').remove();
       $(this).parent().addClass('error');
-      $('.submit').attr('disabled', 'disabled');
+//      $('.submit').attr('disabled', 'disabled');
 
     } else {
       console.log('ok');
