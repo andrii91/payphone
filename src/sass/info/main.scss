@@ -1222,7 +1222,7 @@ background-color: #630a3b;
 
 
 .submit[disabled] {
-  cursor: none;
+  cursor: not-allowed;
   &:before {
     background: #af1870 !important;
   }
